@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'EjercisePart1';
+  title = 'AngularExercises';
+  public active: boolean = false;
+
+  public toggleActive(): void {
+    this.active = !this.active;
+  }
+
 }

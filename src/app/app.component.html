@@ -1,2 +1,10 @@
+<div class="homework-directivas-de-atributo">
+    <button type="button" class="btn btn-primary" (click)="toggleActive()">Toggle active</button>
+    <br>
+    <span [ngClass]="{'redText': active}">Hola tarea 1 directivas de atributo ngClass</span>
+    <br>
+    <span [ngStyle]="{'color': active ? '#ff0000' : '#000000'}">Hola tarea 1 directivas de atributos ngStyle</span>
+
+</div>
 
 <app-posts-table></app-posts-table>
