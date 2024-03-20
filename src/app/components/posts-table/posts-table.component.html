@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-12">
+            <h1 class="title">Posts</h1>
+            <div *ngIf="filteredPosts.length; else noPostsRef">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">title</th>
+                            <th scope="col">body</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="post" *ngFor="let post of filteredPosts; let postIndex = index">
+                            <th scope="row">{{ postIndex }}</th>
+                            <td>{{ post.id }}</td>
+                            <td>{{ post.title }}</td>
+                            <td>{{ post.body }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ng-template #noPostsRef>
+                <div class="no-posts">
+                    <span>
+                        No posts data found, please try again later..
+                    </span>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

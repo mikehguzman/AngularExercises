@@ -1,0 +1,8 @@
+@use 'variables'as variables;
+
+@mixin container {
+	border: 2px solid variables.$primary;
+	border-radius: .5rem;
+	box-shadow: 0 2px 3px variables.$shadow;
+	padding: 2rem;
+}
