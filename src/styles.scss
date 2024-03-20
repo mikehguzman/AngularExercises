@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'variables'as variables;
+
+html {
+	background: variables.$background;
+	color: variables.$text;
+	font-family: variables.$font;
+
+	body {
+		padding: 1rem;
+	}
+}
